@@ -1,15 +1,15 @@
-var webpack = require('webpack')
+var webpack = require('webpack');
 
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.js',
+    'script!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
   ],
-  externals:{
+  externals: {
     jquery: 'jQuery'
   },
-  plugins:[
+  plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
@@ -24,7 +24,9 @@ module.exports = {
     alias: {
       Main: 'app/components/Main.jsx',
       applicationStyles: 'app/styles/app.scss',
-      Navigation: 'app/components/Navigation.jsx'
+      Navigation: 'app/components/Navigation.jsx',
+      Timer: 'app/components/Timer.jsx',
+      Countdown: 'app/components/Countdown.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
